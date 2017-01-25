@@ -1,0 +1,173 @@
+body{
+    background: lightgoldenrodyellow;
+    font-family: Zapf Chancery, cursive;
+}
+
+.product{
+   border-bottom: 1px solid #7E7E7E;
+    display: block;
+}
+.add{
+    border-bottom: 1px solid #7E7E7E;
+    marging: 10px;
+}
+.firstColomn{
+    background-color: white;
+    background: linear-gradient(to top, #EAFF4A, #FFFDB8);
+    width: 702px;
+    float: left;
+    position: relative;
+    top:100px;
+   left: 20px;
+    border-radius: 10px;
+    padding: 5px;
+}
+.height{
+    height: 60px;
+}
+
+.input{
+    width: 80%;
+    height: 30px;
+    margin: 13px;
+    border-color: #2f889a;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.butAdd{
+    width: 80px;
+    height: 35px;
+    background-color: #6fc5ee;
+    border-radius: 5px;
+    font-size: 90%;
+    color: white;
+    color:#464649;
+    box-shadow: 3px 3px;
+    font-family:"PT Sans", sans-serif ;
+}
+.amount{
+
+}
+
+.colomns{
+    display: block;
+    width:234px;
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+}
+.buy{
+    display: block;
+    width:220px;
+    float: left;
+    height: 58px;
+    /*margin-top: 10px;*/
+    /*text-align: center;*/
+    /*border: 1px solid black;*/
+}
+
+.button{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 50%;
+font-size: 120%;
+
+    box-shadow: 0 3px 20px rgba(0,0,0,.25),
+    inset 0 2px 0 rgba(255,255,255,.6),
+    0 2px 0 rgba(0,0,0,.1),
+    inset 0 0 20px rgba(0,0,0,.1);
+}
+.plus{
+    background-color: red;
+    margin-left: 40px;
+    float: left;
+}
+.minus{
+    background-color: green;
+    float: left;
+}
+.num{
+    display: inline-block;
+    width: 55px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 20%;
+    box-shadow: 0 3px 20px rgba(0,0,0,.25),
+    inset 0 2px 0 rgba(255,255,255,.6),
+    0 2px 0 rgba(0,0,0,.1),
+    inset 0 0 20px rgba(0,0,0,.1);
+    font-size: 180%;
+    float: left;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.deleting{
+    /*display: inline-block;*/
+    width: 35px;
+    margin: 0;
+    float: right;
+    height: 35px;
+    cursor: pointer;
+    margin-top: 10px;
+    background: url(http://defaulticon.com/images/icons32x32/delete.png?itok=zIkyZPyc);
+    box-shadow: 0 3px 20px rgba(0,0,0,.25),
+    inset 0 2px 0 rgba(255,255,255,.6),
+    0 2px 0 rgba(0,0,0,.1),
+    inset 0 0 20px rgba(0,0,0,.1);
+}
+.buying{
+    display: inline-block;
+    width: 90px;
+    height: 35px;
+    cursor: pointer;
+    margin: 0;
+    float: right;
+    text-align: inherit;
+    margin-top: 10px;
+    box-shadow: 0 3px 20px rgba(0,0,0,.25),
+    inset 0 2px 0 rgba(255,255,255,.6),
+    0 2px 0 rgba(0,0,0,.1),
+    inset 0 0 20px rgba(0,0,0,.1);
+    border-radius: 4px;
+}
+
+.secondColomn{
+    float: left;
+    width: 200px;
+    position: relative;
+    top:100px;
+    margin-left: 60px;
+    padding: 10px;
+    background-color: white;
+    background: linear-gradient(to top, #EAFF4A, #FFFDB8);
+    border-radius: 10px;
+    font-size: 90%;
+}
+.left{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid black;
+}
+.products{
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+.product2{
+    display: inline-block;
+    width: auto;
+    border: 1px solid #3b3d4b;
+    background-color: #E7E6FF;
+    border-radius: 5px;
+    padding: 4px;
+    margin-top: 5px;
+}
+.num1{
+    display: inline-block;
+    background-color: orange;
+    min-width:20px;
+    text-align: center;
+    border-radius: 50%;
+}
