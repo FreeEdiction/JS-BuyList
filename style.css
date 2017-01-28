@@ -4,12 +4,12 @@ body{
 }
 
 .product{
-   border-bottom: 1px solid #7E7E7E;
     display: block;
 }
 .add{
-    border-bottom: 1px solid #7E7E7E;
     marging: 10px;
+    border-bottom: 1px solid #7E7E7E;
+
 }
 .firstColomn{
     background-color: white;
@@ -22,8 +22,12 @@ body{
     border-radius: 10px;
     padding: 5px;
 }
+
 .height{
+    display: block;
     height: 60px;
+    border-bottom: 1px solid #7E7E7E;
+
 }
 
 .input{
@@ -45,9 +49,6 @@ body{
     box-shadow: 3px 3px;
     font-family:"PT Sans", sans-serif ;
 }
-.amount{
-
-}
 
 .colomns{
     display: block;
@@ -57,6 +58,7 @@ body{
     text-align: center;
 }
 .buy{
+    margin-top: 0px;
     display: block;
     width:220px;
     float: left;
@@ -80,11 +82,13 @@ font-size: 120%;
     inset 0 0 20px rgba(0,0,0,.1);
 }
 .plus{
+    display: inline-block;
     background-color: red;
     margin-left: 40px;
     float: left;
 }
 .minus{
+    display: inline-block;
     background-color: green;
     float: left;
 }
@@ -171,3 +175,107 @@ font-size: 120%;
     text-align: center;
     border-radius: 50%;
 }
+
+.badge{
+    width: 100px;
+    margin: 5px;
+    padding: 5px;
+    height: 130px;
+    background-color:mediumvioletred;
+    position: fixed;
+    bottom: -105px;
+    border-radius: 5px;
+    color: white;
+    transition:	all	1s cubic-bezier(.97,.09,.5,1.26);
+
+}
+.badge-font{
+    font-size: 150%;
+}
+.badge:hover{
+    bottom: 20px;
+    background-color:#0000FF;
+}
+
+
+
+@media print {
+    .badge{
+        border: 1px solid mediumvioletred;
+        background-color: white;
+        bottom: 20px;
+        color: black;
+        height: 100px;
+    }
+    .print{
+        display: none;
+    }
+}
+
+@media(max-width: 500px) {
+    .firstColomn {
+        left: 0px;
+        width: 100%;
+        min-width:450px;
+    }
+    .secondColomn{
+        margin-left: 0px;
+        width: 100%;
+        min-width:450px;
+        padding: 0px;
+        padding-left: 10px;
+    }
+   .colomns{
+       width: 135px;
+   }
+   .height{
+       border-bottom: 0px;
+   }
+   .input{
+       width:50%;
+   }
+   .plus{
+       margin-left: 0px;
+   }
+    .height{
+        display: block;
+        height: 60px;
+        border-bottom: 1px solid #7E7E7E;
+    }
+}
+@media (min-width:500px) {
+    .main{
+        width: 1000px;
+    }
+}
+
+
+
+.tooltip::after {
+    background: purple;
+    border-radius: 10px;
+    color: #FFF;
+    widht:auto;
+    content: attr(data-tooltip);
+    margin-top: -40px;
+    margin-left: -60px;
+    opacity: 0;
+    font-size: large;
+    max-width: 0px;
+    max-height: 0px;
+    padding: 3px 7px;
+    position: absolute;
+    visibility: hidden;
+transform-origin: 50% 100%;
+    transition: all 1s ease-in-out;
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+    max-height:50px;
+    transform: rotate(360deg);
+    max-width: 90px;
+    visibility: visible;
+
+}
+
