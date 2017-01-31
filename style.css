@@ -255,29 +255,23 @@ font-size: 120%;
     background: purple;
     border-radius: 10px;
     color: #FFF;
-    widht:auto;
+    text-align: center;
     content: attr(data-tooltip);
     margin-top: -40px;
     margin-left: -60px;
     opacity: 0;
+    transform: scale(0);
     font-size: large;
-    max-width: 0px;
-    max-height: 0px;
     padding: 3px 7px;
     position: absolute;
     visibility: hidden;
-transform-origin: 50% 100%;
-    transform: scale(0);
-    transition: all 1s ease-in-out;
+    transition:all 1s ease-in-out;
 
 }
 
 .tooltip:hover::after {
     opacity: 1;
-    max-height:50px;
-    transform: rotate(360deg);
     transform: scale(1);
-    max-width: 90px;
     visibility: visible;
 
 }
