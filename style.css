@@ -257,7 +257,7 @@ font-size: 120%;
     color: #FFF;
     text-align: center;
     content: attr(data-tooltip);
-    margin-top: -40px;
+    margin-top: -10px;
     margin-left: -60px;
     opacity: 0;
     transform: scale(0);
@@ -265,11 +265,12 @@ font-size: 120%;
     padding: 3px 7px;
     position: absolute;
     visibility: hidden;
-    transition:all 1s ease-in-out;
+    transition:all 1.5s ease-in-out;
 
 }
 
 .tooltip:hover::after {
+    margin-top: -40px;
     opacity: 1;
     transform: scale(1);
     visibility: visible;
