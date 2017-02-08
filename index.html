@@ -6,49 +6,13 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
+
 <body>
 <div class="main">
 <div class="firstColomn ">
     <div class="add height" >
         <input type="text" placeholder="Введіть назву продукту" class="input">
         <button class="butAdd tooltip" data-tooltip="Додати">Додати</button>
-    </div>
-
-    <div id="Цибуля" class="product height">
-        <div class="name colomns">Цибуля</div>
-        <div class="amount colomns">
-            <button class="button plus tooltip" data-tooltip="Зменшити">-</button>
-            <span id="Цибуля1" class="num">1</span>
-            <button class="button minus tooltip" data-tooltip="Збільшити" >+</button>
-        </div>
-        <div class="buy colomns">
-            <button class="deleting tooltip" data-tooltip="Видалити"></button>
-            <button class="buying tooltip" data-tooltip="Купити">Куплено</button>
-        </div>
-    </div>
-    <div class="product height">
-        <div class="name colomns">Огірки</div>
-        <div class="amount colomns">
-            <button class="button plus tooltip" data-tooltip="Зменшити" >-</button>
-            <span class="num" >1</span>
-            <button class="button minus tooltip" data-tooltip="Збільшити">+</button>
-        </div>
-        <div class="buy colomns">
-            <button class="deleting tooltip" data-tooltip="Видалити"></button>
-            <button class="buying tooltip" data-tooltip="Купити">Куплено</button>
-        </div>
-    </div>
-    <div class="product height">
-        <div class="name colomns">Помідори</div>
-        <div class="amount colomns">
-            <button class="button plus tooltip" data-tooltip="Зменшити" >-</button>
-            <span class="num">1</span>
-            <button class="button minus tooltip" data-tooltip="Збільшити" >+</button>
-        </div>
-        <div class="buy colomns">
-            <button class="deleting tooltip" data-tooltip="Видалити" ></button>
-            <button class="buying tooltip" data-tooltip="Купити" >Куплено</button>
-        </div>
     </div>
 </div>
 
@@ -57,24 +21,11 @@
             <h3>Залишилося</h3>
         </div>
         <div class="products">
-            <div class="product2">
-                <span>Помідори</span>
-                <span class="num1">1</span>
-            </div>
-            <div class="product2">
-                <span>Огірки</span>
-                <span class="num1">1</span>
-            </div>
-            <div class="product2">
-                <span>Цибуля</span>
-                <span class="num1">1</span>
-            </div>
         </div>
         <div class="left">
             <h3>Куплено</h3>
         </div>
         <div class="Bought">
-
         </div>
     </div>
     <!--Бейдж-->
@@ -85,7 +36,36 @@
     </div>
     <!--/Бейдж-->
 </div>
-<script type="text/javascript" href="../Lab1/script.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+<div class="prod visibility"  >
+    <div  class="product height">
+        <div class="name colomns"></div>
+        <div class="amount colomns">
+            <button class="button plus tooltip" disabled="true"  data-tooltip="Зменшити">-</button>
+            <span  class="num">1</span>
+            <button class="button minus tooltip" data-tooltip="Збільшити" >+</button>
+        </div>
+        <div class="buy colomns">
+            <button class="deleting tooltip" data-tooltip="Видалити"></button>
+            <button class="buying tooltip" data-tooltip="Купити">Куплено</button>
+            <button class="notBuying tooltip visibility" data-tooltip="Не куплено">Не куплено</button>
+        </div>
+    </div>
+
+</div>
+<div class="prod1 visibility">
+    <div class="product2">
+        <span class="span"></span>
+        <span class="num1">1</span>
+    </div>
+</div>
+<div class="prod2 visibility">
+    <div class="product2 ">
+        <span class="span"></span>
+        <span class="num1">1</span>
+    </div>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
+<script type="text/javascript" src="script.js"> </script>
 </body>
 </html>
