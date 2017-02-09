@@ -1,7 +1,6 @@
 var LIST = $('.firstColomn');
 var LIST2 = $('.products');
 var LIST3 = $('.Bought');
-
 var ITEM_TEMPLATE = $('.prod').html();
 var ITEM_TEMPLATE1 = $('.prod1').html();
 var ITEM_TEMPLATE2 = $('.prod2').html();
@@ -9,15 +8,27 @@ var ITEM_TEMPLATE2 = $('.prod2').html();
 $(function(){
     $('.butAdd').click(function(){
        var title = $('input').val();
+        if(title!="")
         addItem(title);
     });
 });
+document.onkeyup = function (e) {
+    e = e || window.event;
+    if (e.keyCode === 13) {
+        var title = $('input').val();
+        if(title!="")
+        addItem(title);
+    }
+    // Отменяем действие браузера
+    return false;
+}
+
 function addItem(title) {
     var node = $(ITEM_TEMPLATE); //Create new HTML node
     var nodeX = $(ITEM_TEMPLATE1);
     var nodeY = $(ITEM_TEMPLATE2);
 
-    node.find(".name").text(title);
+    node.find(".productName").text(title);
     nodeX.find(".span").text(title);
     nodeY.find(".span").text(title);
 
@@ -54,6 +65,15 @@ function addItem(title) {
     node.find(".buying").click(function () {
         buyItem(node,nodeX,nodeY);
     });
+    node.find(".productName").click(function () {
+         changeName(node,nodeX,nodeY);
+         node.find(".focus").focusout(function () {
+             finishChanging(node, nodeX, nodeY);
+         });
+
+
+    });
+
     node.find(".notBuying").click(function () {
         notBuyItem(node,nodeX,nodeY);
     });
@@ -63,6 +83,7 @@ function addItem(title) {
     LIST.append(node); //Add to the end of the list
     LIST2.append(nodeX);
     LIST3.append(nodeY);
+
 
 
 }
@@ -96,7 +117,34 @@ function buyItem(node,nodeX,nodeY) {
     nodeY.find(".span").addClass("fontCrossed");
     nodeY.show();
 }
+function changeName(node,nodeX,nodeY) {
+    node.find(".focus").val(node.find(".productName").text());
+    if (!node.find(".name").hasClass("fontCrossed")) {
+    node.find(".productName").hide();
+    node.find(".focus").removeClass("visibility");
+    node.find(".focus").focus();
+}
+}
+function finishChanging(node,nodeX,nodeY) {
+    if (node.find(".focus").val() == "") {
+        alert("Товар не може мати пусте ім'я! ВВедіть назву товару!");
+        node.find(".focus").focus();
+    }
+    if (node.find(".focus").val() != "") {
+    node.find(".productName").text(node.find(".focus").val());
+    nodeX.find(".span").text(node.find(".focus").val());
+    nodeY.find(".span").text(node.find(".focus").val());
+    node.find(".focus").addClass("visibility");
+    node.find(".productName").show();
+}
+}
 
+function updateNode(node, fn) {
+    node.fadeOut(250, function(){
+        fn();
+        node.fadeIn(250);
+    });
+}
 addItem("Огірки");
 addItem("Помідори");
 addItem("Капуста");
